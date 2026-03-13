@@ -4,7 +4,8 @@
 name: Code Quality
 
 on:
-    workflow_call:
+    Push:
+    branches: [ "main" ]
 
 jobs:
     validate:
