@@ -5,7 +5,8 @@ name: Code Quality
 
 on:
   Push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
     validate:
