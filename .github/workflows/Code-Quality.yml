@@ -4,8 +4,8 @@
 name: Code Quality
 
 on:
-    Push:
-      branches: [ "main" ]
+  Push:
+    branches: [ "main" ]
 
 jobs:
     validate:
