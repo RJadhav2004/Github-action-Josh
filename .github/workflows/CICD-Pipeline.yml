@@ -36,6 +36,7 @@ jobs:
           - name: Test application
             run: echo "runnig Test cases"
     deploy:
+        if: inputs.environment == 'dev'
         needs: [ "Code","Build","Test" ]
 
         runs-on: ubuntu-latest
