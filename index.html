@@ -1,57 +1,200 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rameshwar Jadhav | DevOps Engineer</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+body{
+height:100vh;
+background: linear-gradient(135deg,#ff0000,#00ff9d,#0051ff);
+background-size:400% 400%;
+animation:bgmove 12s infinite alternate;
+color:white;
+}
+
+@keyframes bgmove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+}
+
+nav h2{
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00ff9d;
+transform:scale(1.1);
+}
+
+.container{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+height:80vh;
+padding:20px;
+}
+
+.glass{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.2);
+padding:40px;
+max-width:900px;
+transition:.4s;
+}
+
+.glass:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.role{
+font-size:22px;
+color:#d9fffa;
+margin-bottom:20px;
+}
+
+.about{
+line-height:1.7;
+margin-bottom:30px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.skill{
+background:rgba(255,255,255,0.15);
+padding:12px;
+border-radius:10px;
+transition:.3s;
+}
+
+.skill:hover{
+background:rgba(255,255,255,0.3);
+transform:scale(1.08);
+}
+
+.buttons{
+margin-top:30px;
+}
+
+button{
+padding:12px 28px;
+border:none;
+border-radius:25px;
+background:linear-gradient(45deg,#ff0000,#00ff9d,#0051ff);
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+footer{
+text-align:center;
+padding:20px;
+opacity:.8;
+}
+
+</style>
 </head>
+
 <body>
-    <header class="nav-bar">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="section-first">
-        <h1>Hi, I'm [Your Name]</h1>
-        <p>A web developer showcasing my work.</p>
-    </section>
+<nav>
+<h2>RJ DevOps</h2>
 
-    <section id="about" class="section-about">
-        <h2>About Me</h2>
-        <p>Introduce yourself here. Mention your skills and what you enjoy working on.</p>
-    </section>
+<div>
+<a href="#">Home</a>
+<a href="#">Skills</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+</div>
+</nav>
 
-    <section id="projects" class="section-projects">
-        <h2>My Projects</h2>
-        <div class="projects-div">
-            <!-- Sample project tile -->
-            <a href="[Project URL]" class="project-tile">
-                <img src="[Image URL]" alt="Project Name" class="projects-images">
-                <p class="projects-p">[Project Name]</p>
-            </a>
-            <!-- Add more project tiles here -->
-        </div>
-    </section>
+<div class="container">
 
-    <section id="contact" class="section-contact">
-        <h2>Get in Touch</h2>
-        <p>Find me on:</p>
-        <div class="contact-links">
-            <a href="[GitHub URL]" target="_blank">GitHub</a>
-            <a href="[LinkedIn URL]" target="_blank">LinkedIn</a>
-            <a href="mailto:[Your Email]">Email</a>
-        </div>
-    </section>
+<div class="glass">
 
-    <footer>
-        <p>&copy; 2026 [Your Name]</p>
-    </footer>
+<h1>Rameshwar Jadhav</h1>
+<p class="role">DevOps Engineer | AWS | Kubernetes | Terraform</p>
+
+<p class="about">
+DevOps Engineer with 5 years of experience building scalable cloud
+infrastructure and CI/CD pipelines. Experienced in AWS, Docker,
+Kubernetes, Jenkins and Terraform. Currently working on a large
+Maharashtra PWD cloud-based project managing infrastructure and
+automation for thousands of kilometers of road development tracking.
+</p>
+
+<h3>Core Skills</h3>
+
+<div class="skills">
+
+<div class="skill">AWS</div>
+<div class="skill">Terraform</div>
+<div class="skill">Docker</div>
+<div class="skill">Kubernetes</div>
+<div class="skill">Jenkins</div>
+<div class="skill">GitHub Actions</div>
+<div class="skill">Prometheus</div>
+<div class="skill">Grafana</div>
+
+</div>
+
+<div class="buttons">
+<button>View Projects</button>
+<button>Contact Me</button>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Rameshwar Jadhav | DevOps Portfolio
+</footer>
+
 </body>
 </html>
+```
