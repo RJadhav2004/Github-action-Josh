@@ -5,4 +5,11 @@ on:
     branches:
       - main
 jobs:
-    
+   demo:
+
+    runs-on: ubuntu-latest
+    steps:
+        - name: hello to user
+          run: echo "Say hello user"
+        - name: hello to username
+          run: echo "say hello $USER"
