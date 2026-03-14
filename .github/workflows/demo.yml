@@ -15,6 +15,7 @@ jobs:
          run: echo "say hello $USER"
     
    details:
+      needs: [Greeting]
       runs-on: ubuntu-latest
       steps:
         - name: show me version of Docker and python
