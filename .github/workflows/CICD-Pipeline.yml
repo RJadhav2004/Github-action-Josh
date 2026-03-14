@@ -1,0 +1,40 @@
+
+name: Full CICD Pipeline
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+
+    Code:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code from git hub
+              run: mvn clean packages
+
+    Build:
+        needs: ["Code"]
+        runs-on: ubuntu-latest
+        steps:
+          - name: Build application
+            run: build -t myimage
+
+    Test:
+        needs: ["Code","Build"]
+        runs-on: ubuntu-latest
+        steps:
+          - name: Test application
+            run: runnig Test cases
+    deploy:
+        needs: [ "Code","Build","Test" ]
+
+        runs-on: ubuntu-latest
+        steps: 
+          - name: deploy application
+            run: deployed application successfully
+
+
+
+
