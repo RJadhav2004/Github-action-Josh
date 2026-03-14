@@ -5,11 +5,18 @@ on:
     branches:
       - main
 jobs:
-   demo:
+   Greeting:
 
-    runs-on: ubuntu-latest
-    steps:
-        - name: hello to user
-          run: echo "Say hello user"
-        - name: hello to username
-          run: echo "say hello $USER"
+     runs-on: ubuntu-latest
+     steps:
+       - name: hello to user
+         run: echo "Say hello to user"
+       - name: hello to username
+         run: echo "say hello $USER"
+    
+   details:
+      runs-on: ubuntu-latest
+      steps:
+        - name: show me version of Docker and python
+          run: docker --version && python --version
+     
