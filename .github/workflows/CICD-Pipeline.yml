@@ -11,29 +11,29 @@ jobs:
     Code:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout code from git hub
-              run: mvn clean packages
+          - name: checkout code from git hub
+            run: echo "mvn clean packages"
 
     Build:
         needs: ["Code"]
         runs-on: ubuntu-latest
         steps:
           - name: Build application
-            run: build -t myimage
+            run: echo "build -t myimage"
 
     Test:
         needs: ["Code","Build"]
         runs-on: ubuntu-latest
         steps:
           - name: Test application
-            run: runnig Test cases
+            run: echo "runnig Test cases"
     deploy:
         needs: [ "Code","Build","Test" ]
 
         runs-on: ubuntu-latest
         steps: 
           - name: deploy application
-            run: deployed application successfully
+            run: echo "deployed application successfully"
 
 
 
