@@ -1,7 +1,8 @@
 services:
 
   web: 
-    image: ${{ vars.DOCKERHUB_USERNAME }}/github-actions-app:latest
+    image: ${vars.DOCKERHUB_USERNAME}/github-actions-app:latest
     ports:
      - "80:80"
+
      
