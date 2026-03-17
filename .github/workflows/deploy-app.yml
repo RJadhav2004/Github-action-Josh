@@ -14,5 +14,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Set up Docker Compose
+        # This action installs the 'docker compose' command
+        uses: docker/setup-compose-action@v2
+
       - name: Deploy with Docker Compose
         run: docker-compose up -d --build
