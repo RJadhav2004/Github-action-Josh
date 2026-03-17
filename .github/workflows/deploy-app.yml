@@ -1,26 +1,18 @@
 name: Deploy Flask App
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
+env:
+  DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
 
 jobs:
-    env: 
-        DOCKERHUB_USER: ${{ vars.DOCKERHUB_USERNAME }}
-    deploy:
-        
+  deploy:
+    runs-on: self-hosted
 
-        runs-on: self-hosted
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-
-        steps: 
-           - name: checkout Code
-             uses: actions/checkout@v4
-
-
-           - name: deploy with docker compose
-             run: docker-compose up -d --build 
-
-
-
-      
+      - name: Deploy with Docker Compose
+        run: docker-compose up -d --build
