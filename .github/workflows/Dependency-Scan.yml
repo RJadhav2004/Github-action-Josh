@@ -26,7 +26,7 @@ jobs:
               
 
             - name: Audit Dependencies
-              run: pip-audit -r requirement.txt
+              run: pip-audit -r requirements.txt
 
             
 
